@@ -130,7 +130,7 @@ export default function Dashboard() {
 
     // Wait while task is processing
     while (fetch_data.status === "processing") {
-      await new Promise((resolve) => setTimeout(resolve, 20000));
+      await new Promise((resolve) => setTimeout(resolve, 5000));
       fetch_response = await fetch(endpoint2, {
         method: "POST",
         headers: {
