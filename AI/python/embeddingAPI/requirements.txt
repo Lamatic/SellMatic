@@ -1,0 +1,8 @@
+fastapi 
+uvicorn
+pillow
+python-multipart
+llm==0.12
+watchdog==3.0.0
+supabase
+pinecone-client
