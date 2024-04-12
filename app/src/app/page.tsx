@@ -91,7 +91,7 @@ export default function Dashboard() {
     };
 
     const data = {
-      prompt: `${productImage} ${prompt}, ${improvePrompt}`,
+      prompt: `${productImage} ${prompt}, ${improvePrompt}`  ,
       process_mode: "fast",
     };
 
@@ -224,7 +224,7 @@ export default function Dashboard() {
       <div className="flex flex-col max-h-screen">
         <header className="sticky top-0 z-10 flex h-[57px] items-center gap-1 border-b bg-background px-4">
           <div className="flex items-center gap-3">
-            <p className="font-bold text-2xl">Sellmatic</p>
+            <p className="font-bold text-2xl">SellMatic</p>
             <h1 className="text-xl font-semibold">Playground</h1>
           </div>
         </header>
