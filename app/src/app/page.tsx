@@ -225,7 +225,7 @@ export default function Dashboard() {
         <header className="sticky top-0 z-10 flex h-[57px] items-center gap-1 border-b bg-background px-4">
           <div className="flex items-center gap-3">
             <p className="font-bold text-2xl">SellMatic</p>
-            <h1 className="text-xl font-semibold">Playground</h1>
+            <a href={"https://lamatic.ai"} className="text-red-600" target="_blank">by Lamatic.ai</a>
           </div>
         </header>
         <main className="grid flex-1 flex-grow gap-4 overflow-auto p-4 md:grid-cols-2 lg:grid-cols-3">
