@@ -43,7 +43,7 @@ export default function Dashboard() {
     }
     setLoading(true);
 
-    const index = pc.Index("test2");
+    const index = pc.Index("ice");
 
     const embedding_fetch = await fetch(`/api/embeddings?prompt=${prompt}`);
     const embedding = (await embedding_fetch.json()) as any;
@@ -65,12 +65,12 @@ export default function Dashboard() {
 
   function addToCart() {
     if (upscaleImage) {
-      setMessages([...messages, { type: "text", text: "Added to cart!!" }]);
+      setMessages([...messages, { type: "text", text: "Added to shortlist!!" }]);
       setCart([...cart, { image: upscaleImage }]);
       cleanAll();
       return;
     }
-    setMessages([...messages, { type: "text", text: "Added to cart!!" }]);
+    setMessages([...messages, { type: "text", text: "Added to shortlist!!" }]);
     setCart([...cart, { image: productImage }]);
     setPrompt("");
     setProductImage(null);
@@ -235,7 +235,7 @@ export default function Dashboard() {
           >
             <form className="grid w-full items-start gap-6 h-full">
               <fieldset className="h-full gap-6 rounded-lg border p-4 w-full">
-                <legend className="-ml-1 px-1 font-medium">Cart</legend>
+                <legend className="-ml-1 px-1 font-medium">Shortlist</legend>
                 {cart.length > 0 ? (
                   <div className="flex gap-2 flex-col">
                     {cart.map((item: any) => {
@@ -248,7 +248,7 @@ export default function Dashboard() {
                   </div>
                 ) : (
                   <div className="py-8 w-full flex justify-center items-center">
-                    <p className="font-semibold">Your cart is empty</p>
+                    <p className="font-semibold">Your shortlist is empty</p>
                   </div>
                 )}
               </fieldset>
@@ -336,7 +336,7 @@ export default function Dashboard() {
                         <div className="min-h-12 p-3 flex flex-col gap-2">
                           <p>Is this the product you are looking for?</p>
                           <div className="flex items-center gap-2">
-                            <p className="mr-3">Should we add this to cart?</p>
+                            <p className="mr-3">Should we add this to Shortlist?</p>
                             <Button size={"xs"} onClick={addToCart}>
                               Yes!
                             </Button>
@@ -365,7 +365,7 @@ export default function Dashboard() {
               {flow2 && upscaleImage ? (
                 <div className="min-h-12 p-3 flex flex-col gap-2">
                   <div className="flex items-center gap-2">
-                    <p className="mr-3">Should we add this to cart?</p>
+                    <p className="mr-3">Should we add this to Shortlist?</p>
                     <Button size={"xs"} onClick={addToCart}>
                       Yes!
                     </Button>
